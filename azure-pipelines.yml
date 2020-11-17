@@ -11,7 +11,7 @@ pool:
 
 variables:
   rootDir: 'appointment-app'
-  buildDir: '$(root)/build'
+  buildDir: '$(rootDir)/build'
 
 steps:
   - task: NodeTool@0
@@ -37,3 +37,4 @@ steps:
       PathtoPublish: '$(Build.ArtifactStagingDirectory)'
       ArtifactName: 'drop'
       publishLocation: 'Container'
+
