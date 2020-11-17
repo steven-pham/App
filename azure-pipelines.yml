@@ -9,6 +9,10 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+  rootDir: 'appointment-app'
+  buildDir: '${root}/build'
+
 steps:
   - task: NodeTool@0
     inputs: 
