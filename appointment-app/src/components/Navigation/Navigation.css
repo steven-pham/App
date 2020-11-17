@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 18vh;
+    background: white;
+}
+
+.nav-links {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 2.5vw;
+}
+
+.tab:hover {
+    background-color: darkblue;
+    color: blanchedalmond;
+}
+
+.logo {
+    width: 25vw;
+}
