@@ -3,14 +3,14 @@ import "./Appointment.css";
 import { FormDetails } from '../../App'
 
 type AppProps={
-    appointment : FormDetails
-    appointments: FormDetails[]
-    setAppointments: (appointments: FormDetails[]) => void
+    appointment : any
+    appointments: any[]
+    setAppointments: (appointments: any[]) => void
 }
 
 function Appointment (props: AppProps) {
     const deleteHandler = () =>{
-       props.setAppointments(props.appointments.filter(el => el.key !== props.appointment.key))
+       props.setAppointments(props.appointments.filter(el => el.appointmentId !== props.appointment.appointmentId))
     };
 
     return(

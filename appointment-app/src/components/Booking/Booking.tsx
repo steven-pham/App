@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './Booking.css';
 import  {FormDetails} from '../../App'
 import nextId from "react-id-generator";
+import { getPositionOfLineAndCharacter } from 'typescript';
 
 
 type BookingProps = {
@@ -45,10 +46,27 @@ function Booking(props: BookingProps) {
     };
 
 
-    const submitHandler = (e: any) => {
+    const submitHandler = async(e: any) => {
         e.preventDefault();
+        try{
+            let result = await fetch('https://appointment-app-database.azurewebsites.net/api/Appointments',{
+                method: 'post',
+                headers: {
+                    'accept': 'text/plain',
+                    'Content-type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: props.name,
+                    email: props.email,
+                    mobile: props.mobile,
+                    service: props.service
+                })
+            });
+        }catch(e) {
+            console.log(e)
+        }
         props.setAppointments([
-            ...props.appointments, new FormDetails(props.name, props.email, props.mobile, props.service, nextId())
+            ...props.appointments, new FormDetails(props.name, props.email, props.mobile, props.service)
         ]);
         props.setName("");
         props.setEmail("");

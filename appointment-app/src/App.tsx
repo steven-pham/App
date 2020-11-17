@@ -10,14 +10,13 @@ import { stringify } from 'querystring';
 
 
 export class FormDetails {
-  key: string;
+  id?: number;
   name: string;
   email: string;
   mobile: string;
   service: string;
 
-  constructor(name: string, email: string, mobile:string, service:string, key: string){
-    this.key = key;
+  constructor( name: string, email: string, mobile:string, service:string){
     this.name =name;
     this.email = email;
     this.mobile = mobile;
@@ -52,7 +51,7 @@ function App() {
 
   const getLocalAppointments = () => {
     if (localStorage.getItem('appointments') === null) { //local Storage is used to allow websites to store data making it available in the future 
-      //Storage.getItems('key') return the key's value 
+      //Storage.getItems('appointmentId') return the appointmentId's value 
       localStorage.setItem('appointments', JSON.stringify([]));
     } else {
       const appointmentsLocal = localStorage.getItem('appointments');
