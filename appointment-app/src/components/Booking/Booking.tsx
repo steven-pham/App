@@ -72,7 +72,7 @@ function Booking(props: BookingProps) {
                 <input value={props.mobile} onChange={inputMobileHandler} type="text"  placeholder="Your mobile number.." />
 
                 <label>Select Service</label>
-                <select value={props.service} onChange={inputServiceHandler} >
+                <select className="ses" value={props.service} onChange={inputServiceHandler} >
                     <option>Style Cut       ($20.00)</option>
                     <option>Clipper Cut     ($30.00)</option>
                     <option>Skin Fade       ($30.00)</option>

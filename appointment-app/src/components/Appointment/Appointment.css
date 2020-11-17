@@ -1,5 +1,5 @@
 .appointment {
-    margin: 0.5rem;
+    margin: 1.3rem;
     background: white;
     font-size: 3.5vw;
     color: black;
@@ -7,6 +7,9 @@
     justify-content: space-between;
     align-items: center;
     transition: all 1s ease;
+    border-radius: 3vw;
+    border: solid 2px rgb(14, 95, 187);
+    padding: 10px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -33,7 +36,10 @@
 }
 
 .appointment li {
+    overflow: hidden;
     flex: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .fa-trash {

@@ -18,14 +18,14 @@ function AppointmentList (props: AppsProps) {
     return(
         <div className="container">
             <h1>Our Current Appointments</h1>
-            <select id="service" name="service">
+            <select className="customerlist" id="service" name="service">
                     <option >All</option>
                     <option >Customer 1</option>
                     <option >Customer 2</option>
                     <option >Customer 3</option>
                     <option >Costumer 4</option>
             </select>
-            <ul>
+            <ul className="applists">
                 {props.appointments.map(appointment => {
                     return <Appointment appointments={props.appointments} setAppointments={props.setAppointments} appointment={appointment} />
                 })}

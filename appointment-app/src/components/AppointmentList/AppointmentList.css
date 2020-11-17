@@ -1,13 +1,17 @@
 select {
-    width: 100%;
+    width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
     display: block;
     border: 1px solid grey;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-left: 20%;
 }
 
-ul {
+.applists {
     list-style: none;
+    width: 70%;
+    margin-left: 15%;
+    padding-left: 0;
 }
