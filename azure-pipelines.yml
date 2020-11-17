@@ -11,7 +11,7 @@ pool:
 
 variables:
   rootDir: 'appointment-app'
-  buildDir: '${root}/build'
+  buildDir: '$(root)/build'
 
 steps:
   - task: NodeTool@0
